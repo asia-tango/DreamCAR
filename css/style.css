@@ -1,12 +1,35 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  line-height: 1.5;
+}
+
+footer {
+  padding: 20px;
+  color: #e5e5e5;
+  background-color: #333;
+}
+
+.title {
+  text-align: center;
+}
+
 
 /*----------------------------------------HEADER---------*/
+.container {
+  max-width: 1190px;
+  margin: 0 auto;
+}
 
 #contacts {
-  background-color: teal;
-  padding: 10px;
   display: flex;
   justify-content: center;
+  padding: 10px;
+  background-color: teal;
 }
+
 #header-section {
   display: flex;
   justify-content: space-between;
@@ -17,7 +40,7 @@
   display: flex;
 }
 
-.item-navigation {
+.item-indent {
   margin-left: 10px;
 }
 /*--------------------------------------- END HEADER-----*/
@@ -25,13 +48,104 @@
 /*----------------------------------------MAIN---------*/
 
 #main-slider {
-  background-image: url("../images/salon.jpg");
- padding: 50px;
+  background: center / cover no-repeat url("../images/slider_1.jpg");
+  padding: 150px 0;
+}
+
+.about-wrap {
+  display: flex;
+  justify-content: space-between;
+
+  border: 1px dotted #555; /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+}
+
+.gallery-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-gallery {
+  flex-basis: 25%;
+}
+
+.item-gallery > img {
   width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
+}
+
+.special-wrap {
+  display: flex;
+  justify-content: space-around;
+  border: 1px dotted #555; /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+}
+
+.our-partners {
+  background-color: teal;
+}
+
+.partner-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-wrap {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.info-box {
+  display: flex;
+  justify-content: center;
+  
+}
+
+#area-item {
+  margin-top: 10px;
+}
+
+.button-box {
+  display: flex;
+  justify-content: flex-start;
+}
+
+button[type=submit] {
+  margin-left: 132px;
 }
 /*--------------------------------------- END MAIN-----*/
 
 /*----------------------------------------FOOTER---------*/
 /*--------------------------------------- END FOOTER-----*/
+
+/*----------------------------------------MEDIA QUERIES-----*/
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 992px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+/*--------------------------------------- END MEDIA QUERIES--*/

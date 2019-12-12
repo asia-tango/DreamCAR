@@ -16,30 +16,34 @@
 <body>
   <!-- ------------------------------------------------------------HEADER  -->
   <header>
+    <div class="header-wrap">
     <div id="contacts">
       <span>CALL (012) 34 567 89</span>
       <span class="item-indent">F</span>
       <span class="item-indent">Y</span>
       <span class="item-indent">I</span>
     </div>
+    <div class="navigation-box">
     <div class="container">
       <div id="header-section">
         <span>DreamCAR</span>
         <ul class="navigation-wrap">
           <li class="item-navigation item-indent"><a href="#">Home</a></li>
-          <li class="item-navigation item-indent"><a href="#">About</a></li>
-          <li class="item-navigation item-indent"><a href="#">Gallery</a></li>
-          <li class="item-navigation item-indent"><a href="#">Special</a></li>
-          <li class="item-navigation item-indent"><a href="#">Our partners</a></li>
-          <li class="item-navigation item-indent"><a href="#">Contact</a></li>
+          <li class="item-navigation item-indent"><a href="#about">About</a></li>
+          <li class="item-navigation item-indent"><a href="#gallery">Gallery</a></li>
+          <li class="item-navigation item-indent"><a href="#special">Special</a></li>
+          <li class="item-navigation item-indent"><a href="#partners">Our partners</a></li>
+          <li class="item-navigation item-indent"><a href="#contact">Contact</a></li>
         </ul>
       </div>
+    </div>
+  </div>
     </div>
   </header>
   <!-- ----------------------------------------------------------END HEADER  -->
   <!-- ------------------------------------------------------------MAIN  -->
   <main>
-    <div id="main-slider">
+    <div class="main-slider">
       <div class="container">
         <h2>High quality service for your car</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -75,7 +79,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="about">
       <h2>About us</h2>
       <p>DreamCAR Service is an expert on your car. If you are looking for 
         high quality service for your car, then you are on the right track.
@@ -89,7 +93,7 @@
       <p>We do everything for your car!</p>
     </div>
 
-    <div class="container">
+    <div class="container" id="gallery">
         <h2 class="title">Gallery</h2>
         <div class="gallery-wrap">
           <div class="item-gallery"><img src="./images/car_1.jpg" alt="car 1"></div>
@@ -103,7 +107,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="special">
         <h2 class="title">Spesial propositions</h2>
         <div class="special-wrap">
             <div class="item-special">
@@ -118,7 +122,7 @@
         </div>
     </div>
 
-    <div class="our-partners">
+    <div class="our-partners" id="partners">
       <h2 class="title">Our Partners</h2>
       <div class="container">
         <div class="partner-wrap">
@@ -134,22 +138,22 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="contact">
       <h2 class="title">Contact us</h2>
       <p class="title">If you have any questions please fill the next form</p>
-      <div class="form-wrap">
+      <form action="#contact" method="get" class="form-wrap" >
         <div class="info-box">
-          <div class="info-item item-indent"><input type="text" name="name" placeholder="Name"></div>
-          <div class="info-item item-indent"><input type="tel" name="telephone" placeholder="Telephone"></div>
-          <div class="info-item item-indent"><input type="email" name="email" placeholder="Email"></div>
+          <div class="info-item item-indent"><input type="text" class="form-control" name="name" placeholder="Name"></div>
+          <div class="info-item item-indent"><input type="tel" class="form-control" name="telephone" placeholder="Telephone"></div>
+          <div class="info-item item-indent"><input type="email" class="form-control" name="email" placeholder="Email"></div>
         </div>
         <div class="info-box">
-          <textarea name="message" id="area-item" class="item-indent" placeholder="Please, enter your message" cols="65" rows="5"></textarea>
+          <textarea name="message" id="area-item" class="item-indent" placeholder="Please, enter your message" cols="64" rows="5"></textarea>
         </div>
         <div class="button-box">
           <button type="submit">Submit</button>
         </div>
-      </div>
+      </form>
 
     </div>
   </main>

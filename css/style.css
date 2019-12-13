@@ -6,6 +6,25 @@ body {
   line-height: 1.5;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+    background-color: lightgrey;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: lightskyblue;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+main{
+  margin-top: 75px;
+}
+
 h2 {
   font-size: 2rem;
   margin: 20px 0;
@@ -52,18 +71,17 @@ footer {
 }
 
 .item-indent {
-  margin: 0 5px;
+  padding: 0 5px;
 }
 
 .accent-color {
-  /* color: #ffcc05;
-  color: #ff7800; */
   color: lightskyblue;
 }
 
 /*----------------------------------------HEADER---------*/
 .header-wrap {
   position: fixed;
+  z-index: 10;
   width: 100%;
   margin-top: -75px;
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, .7);
@@ -153,8 +171,8 @@ li.item-navigation {
 
 .contact-button a{
   padding: 10px;
-  color: lightskyblue;
-  border: 2px solid lightskyblue;
+  color: #4cb3f2;
+  border: 2px solid #4cb3f2;
   border-radius: .2rem;
     -webkit-border-radius: .2rem;
     -moz-border-radius: .2rem;
@@ -164,12 +182,13 @@ li.item-navigation {
 
 .contact-button a:hover {
   color: #fff;
-  background-color: lightskyblue;
+  background-color: #4cb3f2;
 }
 
 .about-wrap {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .about-item {
@@ -182,9 +201,28 @@ li.item-navigation {
 }
 
 .about-description {
+  display: flex;
+  flex-direction: column;
+  color: #ccc;
   background: center / cover no-repeat url("../images/aboutt.png") fixed;
 }
 
+.about-description h2 {
+  padding: 0 30px;
+}
+
+.about-description p {
+  padding: 10px 50px 10px 30px;
+}
+
+.about-description p:nth-of-type(3) {
+  padding-bottom: 30px;
+}
+
+span.logo {
+  color: lightskyblue;
+}
+#main-nav > i{display: none;}
 .gallery-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -192,45 +230,75 @@ li.item-navigation {
 
 .item-gallery {
   flex-basis: 25%;
+  border: 1px dotted #fff;
+  box-sizing: border-box;
 }
 
-.item-gallery > img {
+ a > img {
   width: 100%;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+  
+}
+
+a > img:hover {
+  opacity: .9;
 }
 
 .special-wrap {
   display: flex;
-  justify-content: space-around;
-  border: 1px dotted #555; /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+  justify-content: center;
+}
+
+.item-special img {
+  width: 100%;
+  border: 2px dotted teal;
+}
+
+.item-special:nth-of-type(1) {
+  margin-right: 10px;
 }
 
 .our-partners {
   background-color: teal;
+  padding: 10px 0 40px;
+  margin-top: 20px;
 }
 
-.partner-wrap {
+.partners-wrap {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-direction: row;
 }
 
 .form-wrap {
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .info-box {
   display: flex;
   justify-content: center;
-  
+}
+.info-box > div {
+  flex-grow: 1;
+  padding: 0px 10px;
+}
+.area-wrap {
+  padding: 0px 10px;
 }
 
-input.form-control{
+input.form-control {
 	border: none;
-	border-bottom: 2px solid lightskyblue;
+  border-bottom: 2px solid lightskyblue;
+  width: 100%;
 }
 
-input.form-control:focus{
+input.form-control:focus {
 	background-color: #76cdd7;
 	color: #fff;
 	border-radius: .1rem;
@@ -239,11 +307,13 @@ input.form-control:focus{
 	  -ms-border-radius: .1rem;
 	  -o-border-radius: .1rem;
 }
-input.form-control:focus::placeholder{
+input.form-control:focus::placeholder {
 	color: transparent;
 }
 
 #area-item {
+  max-width: 800px;
+  height: 70px;
   margin-top: 10px;
   border: 2px solid lightskyblue;
   border-radius: .1rem;
@@ -254,13 +324,21 @@ input.form-control:focus::placeholder{
   resize: none;
 }
 
+textarea {
+  font-family: "Roboto";
+}
+
+textarea::placeholder {
+  font-family: "Roboto";
+}
+
 .button-box {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 button[type=submit] {
-  margin: 10px 0 0 137px;
+  margin: 10px 0 0 0px;
   padding: 5px 35px;
   color: lightskyblue;
   font-weight: unset;
@@ -274,15 +352,11 @@ button[type=submit] {
     -o-border-radius: .1rem;
 }
 
-button[type=submit]:hover{
+button[type=submit]:hover {
 	background-color: lightskyblue;
     color: #fff;
 }
 /*--------------------------------------- END MAIN-----*/
-
-/*----------------------------------------FOOTER---------*/
-
-/*--------------------------------------- END FOOTER-----*/
 
 /*----------------------------------------MEDIA QUERIES-----*/
 
@@ -302,8 +376,19 @@ button[type=submit]:hover{
   .container {
     max-width: 768px;
   }
+  .item-gallery {
+    flex-basis: 50%;
+  }
 }
 
+@media (min-width: 768px) {
+  .form-wrap {
+    width: 600px;
+  }
+  #area-item {
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
   h2 {
     margin-top: 20px;
@@ -330,6 +415,19 @@ button[type=submit]:hover{
     flex-basis: 50%;
     margin: 10px 0;
   }
+  .info-box {
+    flex-direction: column;
+  }
+  input.form-control {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .button-box {
+    justify-content: center;
+  }
+  button[type="submit"] {
+    margin: 10px 0 0 0px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -337,12 +435,29 @@ button[type=submit]:hover{
     max-width: 480px;
   }
   .navigation-wrap {
+    display: none;
     flex-direction: column;
     text-align: center;
   }
+  #main-nav:hover .navigation-wrap{
+    display: flex;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    background-color:#fff;
+    padding: 10px 0px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, .7);
+  }
   .header-wrap {
-    position: static;
     margin: 0;
+    top: 0;
+  }
+  #main-nav {
+    text-align: center;
+  }
+  #main-nav > i {
+    display: inline-block;
+    cursor: pointer;
   }
   .main-slider {
     margin: 0;
@@ -351,6 +466,28 @@ button[type=submit]:hover{
   .about-item {
     flex-basis: 100%;
     margin: 10px 0;
+  }
+  .item-gallery {
+    flex-basis: 100%;
+  }
+  .special-wrap {
+    flex-wrap: wrap;
+  }
+  .item-special:nth-of-type(1) {
+    margin: 0 0 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 360px;
+  }
+  .main-slider p {
+    width: 100%;
+  }
+  .about-description p {
+    font-size: .9rem;
+    line-height: 1.4;
   }
 }
 

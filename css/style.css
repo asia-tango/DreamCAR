@@ -47,10 +47,9 @@ a {
     -o-transition: .3s;
 }
 
-.item-navigation a:hover {
+li a:hover {
   background-color: teal;
   color: #fff;
-  
 }
 
 li > a {
@@ -62,6 +61,10 @@ li > a {
     -o-border-radius: .2rem;
 }
 
+li {
+  padding: 0 5px;
+}
+
 footer {
   margin-top: 20px;
   padding: 20px;
@@ -71,14 +74,6 @@ footer {
 
 .title {
   text-align: center;
-}
-
-.item-indent {
-  padding: 0 5px;
-}
-
-.accent-color {
-  color: lightskyblue;
 }
 
 /*----------------------------------------HEADER---------*/
@@ -95,7 +90,7 @@ footer {
 }
 
 .container {
-  max-width: 1190px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
@@ -110,16 +105,20 @@ footer {
 #contacts span {
   font-size: 13px;
   font-weight: bold;
+  padding: 0 5px;
 }
 
-span.accent-shadow {
+#contacts i,
+#contacts span:nth-of-type(2) {
+  color: lightskyblue;
   transition: .5s;
     -webkit-transition: .5s;
     -moz-transition: .5s;
     -ms-transition: .5s;
     -o-transition: .5s;
 }
-span.accent-shadow:hover {
+
+#contacts span:hover, #contacts i:hover {
   color: #e5e5e5;
   text-shadow: 2px 2px 4px rgba(206, 206, 206, .7);
 }
@@ -276,9 +275,12 @@ a > img:hover {
 
 .partners-wrap {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: space-around;
   flex-direction: row;
+}
+
+.partners-item {
+  padding-bottom: 20px;
 }
 
 .form-wrap {
@@ -336,7 +338,7 @@ textarea {
 }
 
 textarea::placeholder {
-  font-family: "Roboto";
+  font-family: "Red Hat Display";
 }
 
 .button-box {
@@ -369,20 +371,11 @@ button[type=submit]:hover {
 
 @media (max-width: 1200px) {
   .container {
-    max-width: 1024px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .container {
-    max-width: 992px;
+    max-width: 85%;
   }
 }
 
 @media (max-width: 992px) {
-  .container {
-    max-width: 768px;
-  }
   .item-gallery {
     flex-basis: 50%;
   }
@@ -391,7 +384,6 @@ button[type=submit]:hover {
   }
   .partners-item {
     flex-basis: 33%;
-    padding-bottom: 0px;
   }
 }
 
@@ -403,12 +395,10 @@ button[type=submit]:hover {
     width: 100%;
   }
 }
+
 @media (max-width: 768px) {
   h2 {
     margin-top: 20px;
-  }
-  .container {
-    max-width: 640px;
   }
   #header-section {
     flex-direction: column;
@@ -445,9 +435,6 @@ button[type=submit]:hover {
 }
 
 @media (max-width: 640px) {
-  .container {
-    max-width: 480px;
-  }
   .navigation-wrap {
     display: none;
     flex-direction: column;
@@ -493,9 +480,6 @@ button[type=submit]:hover {
 }
 
 @media (max-width: 480px) {
-  .container {
-    max-width: 360px;
-  }
   .main-slider p {
     width: 100%;
   }
@@ -503,6 +487,14 @@ button[type=submit]:hover {
     font-size: .9rem;
     line-height: 1.4;
   }
+  #contacts {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #contacts > div {
+    padding: 0 10px;
+  }
 }
+
 
 /*--------------------------------------- END MEDIA QUERIES--*/

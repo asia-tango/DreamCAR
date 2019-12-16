@@ -1,5 +1,7 @@
 html {
   font-family: sans-serif;
+  overflow-y: scroll;
+  scrollbar-color: lightskyblue lightgrey;
 }
 
 body {
